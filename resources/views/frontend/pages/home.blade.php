@@ -88,8 +88,8 @@
                                         <label style="color:#fff !important;">Ida</label>
                                         <div class="input-wrap">
                                             <div class="icon"><span class="fa fa-calendar"></span></div>
-                                            <input type="text" name="date_ida" class="form-control appointment_date"
-                                                placeholder="Date">
+                                            <input type="text" autocomplete="off" name="date_ida"
+                                                class="form-control appointment_date" placeholder="Date">
                                         </div>
                                     </div>
                                 </div>
@@ -98,8 +98,8 @@
                                         <label style="color:#fff !important;">Volta</label>
                                         <div class="input-wrap">
                                             <div class="icon"><span class="fa fa-calendar"></span></div>
-                                            <input type="text" name="date_volta" class="form-control appointment_date"
-                                                placeholder="Date">
+                                            <input type="text" autocomplete="off" name="date_volta"
+                                                class="form-control appointment_date" placeholder="Date">
                                         </div>
                                     </div>
                                 </div>
@@ -118,7 +118,7 @@
                             <div class="opening-hours">
                                 <h4>Faça seu ChekIn online:</h4>
                                 <p class="pl-3">
-                                    <input type="submit" value="Fazer Checkin" class="btn btn-secondary py-3 px-4">
+                                    <a href="/perfil" class="btn btn-secondary py-3 px-4">Fazer Chekin</a>
                                 </p>
                                 <h4>Chegue ao aeroproto de partida com uma hora de antecedência</h4>
                             </div>

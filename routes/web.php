@@ -17,7 +17,7 @@ Route::post('/busca', 'TravelController@search')->name('busca');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('homebackend');
+Route::get('/home', 'FrontendController@home')->name('homebackend');
 
 /*--rotas admin---*/
 Route::get('/painel', 'HomeController@admin')->name('painel');
@@ -47,3 +47,14 @@ Route::get('/painel/viagens/deleta/{id}', 'TravelController@delet')->name('delet
 
 //rotas de compra
 Route::post('/carrinho/add', 'AirfaresController@create')->name('criapassagem');
+Route::get('/carrinho/all', 'AirfaresController@all')->name('apiAll');
+Route::get('/deletacarrinho/{id}', 'AirfaresController@delet')->name('deletacarrinho');
+Route::get('/carrinho', 'AirfaresController@fechaCompra')->name('fecharCompra');
+Route::post('/pagarcarrinho', 'AirfaresController@pagar')->name('pagar');
+
+//rotas perfil e chekin
+Route::get('/perfil', 'AirfaresController@perfil')->name('perfil');
+Route::get('/checkin/{id}', 'AirfaresController@checkin')->name('fazercheckin');
+Route::post('/checkinout', 'AirfaresController@checkinout')->name('checkinout');
+Route::post('/novopassageiro', 'PassengerController@create')->name('novopassageiro');
+Route::post('/reclamar', 'AirfaresController@reclamar')->name('reclamar');

@@ -94,11 +94,9 @@
             </div>
             <div class="collapse navbar-collapse" id="ftco-nav">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="about.html" class="nav-link">A Nordeste</a></li>
-                    <li class="nav-item"><a href="team.html" class="nav-link">Nossa equipe</a></li>
-                    <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
-                    <li class="nav-item"><a href="contact.html" class="nav-link">Fale Conosco</a></li>
+                    <li class="nav-item active"><a href="/" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="/perfil" class="nav-link">Meu perfil</a></li>
+                    <li class="nav-item"><a href="/painel" class="nav-link">painel de controle</a></li>
                 </ul>
             </div>
         </div>

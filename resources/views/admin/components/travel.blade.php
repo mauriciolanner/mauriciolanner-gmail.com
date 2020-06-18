@@ -126,13 +126,13 @@
                     </div>
                     <div class="form-group">
                         <label>Valor Economica</label>
-                        <input type="text" name="price_economics" class="reais form-control" placeholder="0,00"
-                            required>
+                        <input type="text" onblur="pClasse(priceEconomics.value)" id="priceEconomics"
+                            name="price_economics" class="reais form-control" placeholder="0,00" required>
                     </div>
                     <div class="form-group">
                         <label>Valor Primeira classe</label>
-                        <input type="text" name="price_first_class" class="reais form-control" placeholder="0,00"
-                            required>
+                        <input type="text" id="priceFirstClass" name="price_first_class" class="reais form-control"
+                            placeholder="0,00" readonly=“true” required>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -187,7 +187,7 @@
                     <div class="form-group">
                         <label>Valor Primeira classe</label>
                         <input type="text" name="price_first_class" id="firstclass" class="reais form-control"
-                            placeholder="0,00" required>
+                            placeholder="0,00" readonly=“true” required>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -219,5 +219,12 @@
   modal.find('#economics').val(economics)
   modal.find('#firstclass').val(firstclass)
     })
+
+function pClasse(valor){
+    valor = valor.replace(/\,|\-/g, '.');
+    var porcent = ((valor / 100) * 40)
+    var valuePClasse = parseFloat(valor) + parseFloat(porcent)
+    document.getElementById('priceFirstClass').value = valuePClasse.toFixed(2)
+}
 </script>
 @endsection

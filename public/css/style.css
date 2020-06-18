@@ -13354,3 +13354,87 @@ textarea.form-control {
     transform: translateX(5px) scale(1.001);
     
 }
+.carrinho-canto{
+    bottom: 8px;
+    right: 21px;
+    position: fixed;
+    z-index: 9;
+    background-color: #ffffff;
+    border-radius: 12px;
+    -webkit-box-shadow: -1px 0px 17px -2px rgba(0,0,0,0.61);
+    -moz-box-shadow: -1px 0px 17px -2px rgba(0,0,0,0.61);
+    box-shadow: -1px 0px 17px -2px rgba(0,0,0,0.61);
+}
+.carrinho-item{
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+}
+.fundo-laranja{
+    color: #fff;
+    background-color: #F88C1F;
+}
+.fundo-verde{
+    color: #fff;
+    background-color: #20c997;
+}
+.ticketTopoEsquerda{
+    border-right: 1px solid #fff !important;
+    padding: 10px;
+    color: #fff;
+    background-color: #F88C1F;
+    border-top-left-radius: 10px;
+}
+.ticketTopoDireita{
+    padding: 10px;
+    color: #fff;
+    background-color: #F88C1F;
+    border-top-right-radius: 10px;
+}
+.corpo{
+    border: 1px solid rgb(221, 221, 221) !important;
+}
+.ticketBaixoEsquerda{
+    border-right: 1px solid #fff !important;
+    padding: 10px;
+    color: #fff;
+    background-color: #F88C1F;
+    border-bottom-left-radius: 10px;
+}
+.ticketBaixoDireita{
+    padding: 10px;
+    color: #fff;
+    background-color: #F88C1F;
+    border-bottom-right-radius: 10px;
+}
+.valor{
+    color: #9e1d41;
+    font-size: 23px;
+}
+.confirmado{
+    color: #20c997;
+    font-size: 23px;
+}
+.total{
+    font-size: 18px;
+}
+.paddcard{
+    padding: 20px;
+}
+.creditCardFrente{
+    color: #fff;
+    padding: 10px;
+    width: 100%;
+    background-color: #9e1c40;
+    border-radius: 8px;
+}
+.totalpagar{
+    font-size: 30px;
+}
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:rgb(197, 197, 197);border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:rgb(197, 197, 197);border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-oczp{background-color:#fff;border-color:rgb(197, 197, 197);text-align:center;vertical-align:top}
+/* pay */

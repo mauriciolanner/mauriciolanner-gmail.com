@@ -10,7 +10,7 @@
                 <p class="breadcrumbs mb-2"><span class="mr-2"><a href="index.html">Home <i
                                 class="fa fa-chevron-right"></i></a></span> <span>Busca <i
                             class="fa fa-chevron-right"></i></span></p>
-                <h1 class="mb-0 bread" id="resultado">Voos encontrados</h1>
+                <h1 class="mb-0 bread">Voos encontrados</h1>
             </div>
         </div>
     </div>
@@ -71,10 +71,16 @@
                                                 <li>Wi-Fi Gratuito</li>
                                                 <li>Almoço / Janta incuido</li>
                                             </ul>
+                                            @if(Auth::check())
                                             <button type="button" onclick="compra({{$voos->id}},1)"
                                                 class="btn btn-lg btn-block btn-primary">
                                                 Comprar
                                             </button>
+                                            @else
+                                            <a href="/login" class="btn btn-lg btn-block btn-primary">
+                                                Faça login para começar
+                                            </a>
+                                            @endif
                                         </div>
                                     </div>
                                     <div class="card mb-4 box-shadow">
@@ -91,10 +97,16 @@
                                                 <li> - </li>
                                                 <li> - </li>
                                             </ul>
-                                            <button type="button" onclick="compra({{$voos->id}}, 2)"
+                                            @if(Auth::check())
+                                            <button type="button" onclick="compra({{$voos->id}},2)"
                                                 class="btn btn-lg btn-block btn-primary">
                                                 Comprar
                                             </button>
+                                            @else
+                                            <a href="/login" class="btn btn-lg btn-block btn-primary">
+                                                Faça login para começar
+                                            </a>
+                                            @endif
                                         </div>
                                     </div>
                                 </div>
@@ -147,9 +159,16 @@
                                                 <li>Wi-Fi Gratuito</li>
                                                 <li>Almoço / Janta incuido</li>
                                             </ul>
-                                            <button type="button" class="btn btn-lg btn-block btn-primary">
+                                            @if(Auth::check())
+                                            <button type="button" onclick="compra({{$voosvolta->id}},1)"
+                                                class="btn btn-lg btn-block btn-primary">
                                                 Comprar
                                             </button>
+                                            @else
+                                            <a href="/login" class="btn btn-lg btn-block btn-primary">
+                                                Faça login para começar
+                                            </a>
+                                            @endif
                                         </div>
                                     </div>
                                     <div class="card mb-4 box-shadow">
@@ -166,9 +185,16 @@
                                                 <li> - </li>
                                                 <li> - </li>
                                             </ul>
-                                            <button type="button" class="btn btn-lg btn-block btn-primary">
+                                            @if(Auth::check())
+                                            <button type="button" onclick="compra({{$voosvolta->id}},1)"
+                                                class="btn btn-lg btn-block btn-primary">
                                                 Comprar
                                             </button>
+                                            @else
+                                            <a href="/login" class="btn btn-lg btn-block btn-primary">
+                                                Faça login para começar
+                                            </a>
+                                            @endif
                                         </div>
                                     </div>
                                 </div>
@@ -184,4 +210,22 @@
         </div>
     </div>
 </section>
+@if(Auth::check())
+<div class="carrinho-canto" id="carrinho" style="display: none">
+    <div class="carrinho-item">
+        <strong>Sua compra</strong>
+    </div>
+    <div id="itens">
+        <!--div class="carrinho-item fundo-laranja">
+            <span class="flaticon-acupuncture mr-2"></span>
+            SSA -> REC | Economica <span class="fa fa-check mr-3"></span>
+        </div-->
+    </div>
+    <a href="/carrinho">
+        <div class="carrinho-item fundo-verde text-center">
+            Finalizar
+        </div>
+    </a>
+</div>
+@endif
 @endsection
